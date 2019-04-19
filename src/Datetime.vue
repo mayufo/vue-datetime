@@ -201,7 +201,7 @@ export default {
       this.$emit('input', datetime ? datetime.toISO() : '')
     },
     open (event) {
-      event.target.blur()
+      // event.target.blur()
 
       this.isOpen = true
     },

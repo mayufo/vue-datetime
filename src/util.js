@@ -1,6 +1,8 @@
 import { DateTime, Info, Settings } from 'luxon'
 import FlowManager from './FlowManager'
 
+console.log(Info)
+
 export function capitalize (string) {
   return string.charAt(0).toUpperCase() + string.slice(1)
 }
@@ -63,7 +65,7 @@ export function weekdays (weekStart) {
     weekStart = 6
   }
 
-  let weekDays = Info.weekdays('short').map(weekday => capitalize(weekday))
+  let weekDays = ['周一', '周二', '周三', '周四', '周五', '周六', '周日'].map(weekday => capitalize(weekday))
 
   weekDays = weekDays.concat(weekDays.splice(0, weekStart))
 
@@ -71,7 +73,7 @@ export function weekdays (weekStart) {
 }
 
 export function months () {
-  return Info.months().map(month => capitalize(month))
+  return ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'].map(month => capitalize(month))
 }
 
 export function hours (step) {

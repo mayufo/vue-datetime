@@ -163,10 +163,11 @@ export default {
       return this.newDatetime.minute
     },
     dateFormatted () {
-      return this.newDatetime.toLocaleString({
-        month: 'long',
-        day: 'numeric'
-      })
+      return `${this.newDatetime.month}月${this.newDatetime.day}日`
+      // return this.newDatetime.toLocaleString({
+      //   month: 'long',
+      //   day: 'numeric'
+      // })
     },
     minDatetimeUTC () {
       return this.minDatetime ? this.minDatetime.toUTC() : null
